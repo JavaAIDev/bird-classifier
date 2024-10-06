@@ -10,7 +10,7 @@ import picocli.CommandLine.Parameters;
 @CommandLine.Command(
     name = "bird-classifier",
     mixinStandardHelpOptions = true,
-    version = "0.1.0",
+    version = "0.2.0",
     description = "Classify birds"
 )
 public class Cli implements Callable<String> {
