@@ -1,0 +1,56 @@
+# Create release
+
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  push:
+    tags:
+      - v[0-9]+.*
+
+jobs:
+
+  build:
+    name: Build jar file
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: maven
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots package
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: bird-classifier
+          path: |
+            target/bird-classifier-jar-with-dependencies.jar
+          retention-days: 1
+  release:
+    name: "Release"
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+
+      - name: Rename files
+        run: |
+          mkdir release-files
+          mv bird-classifier/bird-classifier-jar-with-dependencies.jar release-files/bird-classifier.jar
+
+      - name: Create a Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          body: ${{ github.ref_name }}
+          artifacts: "release-files/*"
+          generateReleaseNotes: true
