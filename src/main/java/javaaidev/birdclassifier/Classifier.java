@@ -82,9 +82,9 @@ public class Classifier {
     System.arraycopy(r, 0, data, 0, r.length);
     System.arraycopy(g, 0, data, r.length, g.length);
     System.arraycopy(b, 0, data, r.length + g.length, b.length);
-    int total = data.length;
-    float[] float32Data = new float[total];
-    for (int i = 0; i < total; i++) {
+    int length = data.length;
+    float[] float32Data = new float[length];
+    for (int i = 0; i < length; i++) {
       float32Data[i] = (float) (data[i] / 255.0);
     }
     return OnnxTensor.createTensor(env, FloatBuffer.wrap(float32Data),
