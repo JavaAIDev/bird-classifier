@@ -24,14 +24,14 @@ public class Cli implements Callable<String> {
   @Option(
       names = {"-w", "--width"},
       defaultValue = "260",
-      description = "Image width"
+      description = "Model image width"
   )
   int imageWidth = 260;
 
   @Option(
       names = {"-h", "--height"},
       defaultValue = "260",
-      description = "Image height"
+      description = "Model image height"
   )
   int imageHeight = 260;
 
