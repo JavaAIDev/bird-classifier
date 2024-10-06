@@ -55,7 +55,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>io.github.alexcheng1982.birdclassifier.Cli
+              <mainClass>javaaidev.birdclassifier.Cli
               </mainClass>
             </manifest>
           </archive>
