@@ -5,6 +5,7 @@ import java.util.concurrent.Callable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
+import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 @CommandLine.Command(
@@ -20,14 +21,14 @@ public class Cli implements Callable<String> {
   @Parameters(index = "0")
   URL imageUrl;
 
-  @CommandLine.Option(
+  @Option(
       names = {"-w", "--width"},
       defaultValue = "260",
       description = "Image width"
   )
   int imageWidth = 260;
 
-  @CommandLine.Option(
+  @Option(
       names = {"-h", "--height"},
       defaultValue = "260",
       description = "Image height"
