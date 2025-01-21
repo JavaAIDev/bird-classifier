@@ -1,4 +1,4 @@
-package javaaidev.birdclassifier;
+package com.javaaidev.birdclassifier;
 
 import java.net.URL;
 import java.util.concurrent.Callable;

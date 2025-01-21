@@ -1,4 +1,4 @@
-package javaaidev.birdclassifier;
+package com.javaaidev.birdclassifier;
 
 import ai.onnxruntime.OnnxTensor;
 import ai.onnxruntime.OrtEnvironment;

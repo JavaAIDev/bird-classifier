@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.github.javaaidev</groupId>
+  <groupId>com.javaaidev</groupId>
   <artifactId>bird-classifier</artifactId>
   <version>0.2.1-SNAPSHOT</version>
   <name>Bird classifier</name>
@@ -19,7 +19,7 @@
     <dependency>
       <groupId>com.microsoft.onnxruntime</groupId>
       <artifactId>onnxruntime</artifactId>
-      <version>1.19.2</version>
+      <version>1.20.0</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -55,7 +55,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>javaaidev.birdclassifier.Cli
+              <mainClass>com.javaaidev.birdclassifier.Cli
               </mainClass>
             </manifest>
           </archive>
