@@ -6,7 +6,7 @@
 
   <groupId>com.javaaidev</groupId>
   <artifactId>bird-classifier</artifactId>
-  <version>0.3.0-SNAPSHOT</version>
+  <version>0.4.0</version>
   <name>Bird classifier</name>
 
   <properties>
@@ -19,7 +19,7 @@
     <dependency>
       <groupId>com.microsoft.onnxruntime</groupId>
       <artifactId>onnxruntime</artifactId>
-      <version>1.20.0</version>
+      <version>1.22.0</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
